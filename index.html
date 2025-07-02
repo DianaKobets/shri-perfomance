@@ -278,9 +278,9 @@
           setActiveTab(event.target.value);
         };
 
-        let sizes = [];
+        const [sizes, setSizes] = React.useState([]);
         const onSize = (size) => {
-          sizes = [...sizes, size];
+          setSizes((prev) => [...prev, size]);
         };
 
         React.useEffect(() => {
