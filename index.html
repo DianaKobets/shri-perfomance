@@ -271,7 +271,7 @@
               new URLSearchParams(location.search).get("tab") || "all"
             );
           }
-        }, []);
+        });
 
         const onSelectInput = (event) => {
           setActiveTab(event.target.value);
@@ -452,8 +452,8 @@
                     aria-labelledby={`tab_${key}`}
                   >
                     <ul className="section__panel-list">
-                      {TABS.items.map((item, index) => (
-                        <Event key={item.title} {...item} onSize={onSize} />
+                      {TABS[key].items.map((item, index) => (
+                        <Event key={index} {...item} onSize={onSize} />
                       ))}
                     </ul>
                   </div>
