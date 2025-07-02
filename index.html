@@ -11,10 +11,14 @@
       type="font/woff2"
       crossorigin="anonymous"
     />
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <link
+      rel="preload"
+      href="main.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="main.min.css" /></noscript>
   </head>
   <body>
     <div id="app"></div>
@@ -37,7 +41,8 @@
 
       <div class="footer__copyright">© 1997–2023 ООО «Яндекс»</div>
     </footer>
-
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="dist/app.js"></script>
   </body>
 </html>
